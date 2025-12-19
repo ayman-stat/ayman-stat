@@ -1,5 +1,24 @@
-# 💫 About Me:
-🔭 I’m currently working on: Leading data science teams at Leejam Sports Company to build unified semantic models on Microsoft Fabric and deliver advanced ML solutions like customer churn prediction and sales forecasting.<br><br>👯 I’m looking to collaborate on: Scalable AI/BI solutions, cross-functional data initiatives, and open-source projects involving predictive analytics in the healthcare and sports sectors.<br><br>🤝 I’m looking for help with: Advanced research and methodologies for my ongoing M.Sc. in Data Science at Cairo University.<br><br>🌱 I’m currently learning: Advanced Deep Learning techniques (Supervised Machine Learning) and exploring cutting-edge architectures for enterprise data strategy.<br><br>💬 Ask me about: Machine Learning, Business Intelligence (Power BI), ETL Pipeline Automation, and how I reduced reporting time by 99% using Power Query.<br><br>⚡ Fun fact: I optimized a legacy reporting process that used to take 4 hours, bringing it down to under 1 minute!
+
+# 💫 About Me
+
+🔭 **I’m currently working on:**  
+Leading data science teams at **Leejam Sports Company** to build **unified semantic models in Microsoft Fabric**, and deliver advanced ML solutions such as **customer churn prediction** and **sales forecasting**.
+
+👯 **I’m looking to collaborate on:**  
+Scalable **AI/BI solutions**, cross-functional data initiatives, and **open-source projects** in **predictive analytics** — especially in **healthcare** and **sports analytics**.
+
+🤝 **I’m seeking support with:**  
+Advanced research and methodologies for my **M.Sc. in Data Science (Cairo University)**.
+
+🌱 **I’m currently learning:**  
+Advanced **Deep Learning techniques** and exploring cutting-edge neural architectures for enterprise data strategy.
+
+💬 **Ask me about:**  
+Machine Learning, Business Intelligence (**Power BI**), ETL automation, and how I **reduced reporting time by 99% using Power Query**.
+
+⚡ **Fun fact:**  
+I optimized a legacy reporting process that took *4 hours* and brought it down to *under 1 minute!*
+
 
 
 ## 🌐 Socials:
