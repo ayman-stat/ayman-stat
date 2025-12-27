@@ -1,7 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import { Home, FolderOpen, Code, ChevronDown } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Home, FolderOpen, Code, ChevronDown, Briefcase, Menu as MenuIcon, X } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, Transition } from '@headlessui/react'
@@ -33,6 +33,7 @@ const languages = [
 export default function Header() {
   const pathname = usePathname()
   const [selectedLanguage, setSelectedLanguage] = useState(languages[1]) // Default to English
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
     <motion.header
@@ -83,8 +84,76 @@ export default function Header() {
             })}
           </nav>
 
+          {/* Hire Me Button - Hidden on mobile */}
+          <motion.a
+            href="https://wa.me/201060060292?text=Freelance"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative group overflow-hidden hidden sm:block"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <div className="relative px-4 sm:px-5 py-2 sm:py-2.5 rounded-lg bg-gradient-to-r from-cyber-lime to-emerald-400 shadow-lg shadow-cyber-lime/30">
+              {/* Glow on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-cyber-lime to-data-blue opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md" />
+
+              {/* Content */}
+              <div className="relative flex items-center gap-2 text-white font-semibold text-xs sm:text-sm z-10">
+                <Briefcase className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>Hire Me</span>
+              </div>
+
+              {/* Shine animation */}
+              <motion.div
+                className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                animate={{
+                  x: ['-200%', '200%'],
+                }}
+                transition={{
+                  duration: 2,
+                  repeat: Infinity,
+                  repeatDelay: 3,
+                  ease: 'easeInOut',
+                }}
+              />
+            </div>
+          </motion.a>
+
+          {/* Mobile Menu Button */}
+          <motion.button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="lg:hidden p-2 rounded-lg bg-slate-800/50 border border-slate-700 text-slate-300 hover:text-cyber-lime hover:border-cyber-lime/50 transition-colors"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="Toggle menu"
+          >
+            <AnimatePresence mode="wait">
+              {mobileMenuOpen ? (
+                <motion.div
+                  key="close"
+                  initial={{ rotate: -90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: 90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <X className="w-6 h-6" />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="menu"
+                  initial={{ rotate: 90, opacity: 0 }}
+                  animate={{ rotate: 0, opacity: 1 }}
+                  exit={{ rotate: -90, opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <MenuIcon className="w-6 h-6" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.button>
+
           {/* Language Dropdown */}
-          <Menu as="div" className="relative">
+          {/* <Menu as="div" className="relative">
             <Menu.Button
               as={motion.button}
               className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/50 border border-slate-700 text-slate-300 hover:text-cyber-lime hover:border-cyber-lime/50 transition-colors"
@@ -146,9 +215,101 @@ export default function Header() {
                 </div>
               </Menu.Items>
             </Transition>
-          </Menu>
+          </Menu> */}
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileMenuOpen(false)}
+            />
+
+            {/* Menu Panel */}
+            <motion.div
+              className="fixed top-16 left-0 right-0 z-50 lg:hidden"
+              initial={{ y: -20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: -20, opacity: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="mx-4 mt-2 rounded-xl bg-slate-800/95 backdrop-blur-xl border border-slate-700 shadow-2xl overflow-hidden">
+                {/* Navigation Links */}
+                <nav className="p-2">
+                  {navLinks.map((link, index) => {
+                    const Icon = link.icon
+                    const isActive = pathname === link.href
+                    return (
+                      <motion.div
+                        key={link.href}
+                        initial={{ x: -20, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        transition={{ delay: index * 0.1 }}
+                      >
+                        <Link
+                          href={link.href}
+                          onClick={() => setMobileMenuOpen(false)}
+                          className={`flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
+                            isActive
+                              ? 'bg-cyber-lime/20 text-cyber-lime border border-cyber-lime/30'
+                              : 'text-slate-300 hover:text-cyber-lime hover:bg-slate-700/50'
+                          }`}
+                        >
+                          <Icon className="w-5 h-5" />
+                          <span className="font-medium">{link.label}</span>
+                        </Link>
+                      </motion.div>
+                    )
+                  })}
+                </nav>
+
+                {/* Divider */}
+                <div className="h-px bg-slate-700 mx-2" />
+
+                {/* Hire Me Button in Mobile Menu */}
+                <div className="p-2">
+                  <motion.a
+                    href="https://wa.me/201060060292?text=Freelance"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="relative group overflow-hidden block"
+                    initial={{ x: -20, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ delay: navLinks.length * 0.1 }}
+                  >
+                    <div className="relative px-4 py-3 rounded-lg bg-gradient-to-r from-cyber-lime to-emerald-400 shadow-lg shadow-cyber-lime/30">
+                      <div className="relative flex items-center justify-center gap-2 text-white font-semibold text-sm z-10">
+                        <Briefcase className="w-5 h-5" />
+                        <span>Hire Me</span>
+                      </div>
+                      <motion.div
+                        className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                        animate={{
+                          x: ['-200%', '200%'],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                          repeatDelay: 3,
+                          ease: 'easeInOut',
+                        }}
+                      />
+                    </div>
+                  </motion.a>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </motion.header>
   )
 }
