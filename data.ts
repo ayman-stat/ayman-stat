@@ -44,7 +44,7 @@ export const experiences: Experience[] = [
     company: 'Leejam Sports Company',
     role: 'Lead Data Scientist',
     period: 'Apr. 2025 – Present',
-    location: 'Saudi Arabia',
+    location: 'Saudi Arabia ',
     achievements: [
       'Led a team of 4 analysts and data scientists to deliver advanced analytics and ML solutions',
       'Designed and deployed unified semantic model on Microsoft Fabric, consolidating 5+ data sources and cutting maintenance time by 40%',
