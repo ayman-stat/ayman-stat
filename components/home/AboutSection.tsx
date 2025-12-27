@@ -54,18 +54,18 @@ export default function AboutSection() {
 
             <div className="space-y-3 md:space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed mb-6 md:mb-8">
               <p>
-                With over 5 years of experience in data science, I've dedicated my career to
+                With over 5 years of experience in data science, I&apos;ve dedicated my career to
                 transforming complex data into actionable insights that drive multimillion-dollar
                 business decisions.
               </p>
               <p>
                 My journey started with a passion for solving problems through data. From building
-                my first churn prediction model to leading teams of data scientists, I've always
+                my first churn prediction model to leading teams of data scientists, I&apos;ve always
                 focused on creating solutions that deliver measurable business impact.
               </p>
               <p>
                 I believe in the power of data storytelling and making analytics accessible to
-                everyone. Whether it's automating reporting processes or building production ML
+                everyone. Whether it&apos;s automating reporting processes or building production ML
                 models, my goal is always the same: turn data into decisions.
               </p>
             </div>
@@ -123,7 +123,7 @@ export default function AboutSection() {
                   <h4 className="font-semibold text-white mb-1 md:mb-2 text-sm md:text-base">Fun Fact</h4>
                   <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
                     I once reduced a 4-hour Excel reporting process to 1 minute using Python
-                    automation - that's a 99.6% time reduction! 🚀
+                    automation - that&apos;s a 99.6% time reduction! 🚀
                   </p>
                 </div>
               </div>

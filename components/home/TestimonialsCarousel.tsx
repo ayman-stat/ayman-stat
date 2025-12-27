@@ -46,7 +46,7 @@ export default function TestimonialsCarousel() {
             >
               <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-cyber-lime mb-4 sm:mb-6 opacity-50" />
               <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-6 sm:mb-8 leading-relaxed">
-                "{testimonials[currentIndex].quote}"
+                &quot;{testimonials[currentIndex].quote}&quot;
               </p>
               <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
                 <div>

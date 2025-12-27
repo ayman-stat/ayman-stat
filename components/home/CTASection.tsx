@@ -50,7 +50,7 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          Let's discuss how I can help drive your business forward with data-driven insights and
+          Let&apos;s discuss how I can help drive your business forward with data-driven insights and
           machine learning solutions.
         </motion.p>
 
