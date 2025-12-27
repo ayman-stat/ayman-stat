@@ -286,7 +286,7 @@ export const hero = {
   cta: {
     primary: { text: 'View My Work', href: '#projects' },
     secondary: { text: 'Download Resume', href: '/resume.pdf' },
-    connect: { text: "Let's Connect", href: 'mailto:mohammed.ayman.stat@gmail.com' },
+    connect: { text: "Let's Connect", href: 'https://wa.me/201060060292?text=Freelance' },
   },
   badges: [
     { label: '50+ Projects', icon: '🚀' },
