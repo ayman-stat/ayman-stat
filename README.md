@@ -44,6 +44,7 @@ Supported Retail Risk analytics through automated reporting, Power BI dashboards
 ## Public Repositories Worth Reviewing
 
 - [Data-Engineering--DEPI](https://github.com/ayman-stat/Data-Engineering--DEPI): real-time data engineering pipeline with Kafka, PySpark, MongoDB, lakehouse layers, Power BI plan, and ML forecasting.
+- [aws-bedrock-genai-agents-labs](https://github.com/ayman-stat/aws-bedrock-genai-agents-labs): in-progress AWS Bedrock GenAI and AI agents learning labs with foundation model invocation examples.
 - [ML-Zoomcamp-2025](https://github.com/ayman-stat/ML-Zoomcamp-2025): applied machine learning engineering learning workspace.
 - [Advanced-SQL-for-Query-Tuning-and-Performance-Optimization](https://github.com/ayman-stat/Advanced-SQL-for-Query-Tuning-and-Performance-Optimization): PostgreSQL query tuning and performance optimization notes.
 - [Power-BI-DEPI](https://github.com/ayman-stat/Power-BI-DEPI): Power BI and BI foundations learning workspace.
