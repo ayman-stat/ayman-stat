@@ -12,6 +12,7 @@ I combine data science, business intelligence, stakeholder communication, and pr
 - Build predictive analytics solutions, including churn prediction, forecasting, credit risk analytics, and segmentation.
 - Develop executive BI dashboards and semantic models for KPI tracking and business storytelling.
 - Grow deeper capability in Generative AI, AI agents, AWS AI, Amazon Bedrock, deep learning, and ML in production.
+- Complete the [AWS Generative AI and AI Agents with Amazon Bedrock Professional Certificate](https://www.coursera.org/professional-certificates/aws-generative-ai-developers) on Coursera.
 - Continue M.Sc. Data Science studies at Cairo University.
 
 ## Selected Work
@@ -53,7 +54,12 @@ Supported Retail Risk analytics through automated reporting, Power BI dashboards
 **BI & Reporting:** Power BI, Tableau, Excel, Power Query, Power Pivot, DAX, executive dashboards  
 **Data Engineering:** ETL, data cleaning, data quality, PySpark, Kafka, MongoDB, SQL Server, Oracle SQL  
 **ML & AI:** scikit-learn, model evaluation, feature engineering, churn prediction, credit risk analytics, ML production concepts  
-**Current AI Development:** Generative AI, AI agents, AWS AI, Amazon Bedrock, DeepLearning.AI specializations
+**Current AI Development:** Generative AI, AI agents, AWS AI, Amazon Bedrock, AWS Generative AI and AI Agents with Amazon Bedrock Professional Certificate (Coursera, in progress), DeepLearning.AI specializations
+
+## Professional Development In Progress
+
+- [AWS Generative AI and AI Agents with Amazon Bedrock Professional Certificate](https://www.coursera.org/professional-certificates/aws-generative-ai-developers), Coursera
+- Deep learning, ML in production, and data engineering learning paths aligned with production-minded AI and analytics roles.
 
 ## Professional Direction
 
