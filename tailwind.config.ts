@@ -9,18 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'midnight-blue': '#0a1929',
-        'slate-dark': '#1e293b',
-        'cyber-lime': '#00ff88',
-        'data-blue': '#3b82f6',
+        'midnight-blue': '#0b1220',
+        'slate-dark': '#111827',
+        'cyber-lime': '#10b981',
+        'data-blue': '#2563eb',
       },
       animation: {
         'glow': 'glow 2s ease-in-out infinite alternate',
       },
       keyframes: {
         glow: {
-          '0%': { boxShadow: '0 0 5px #00ff88, 0 0 10px #00ff88' },
-          '100%': { boxShadow: '0 0 10px #00ff88, 0 0 20px #00ff88, 0 0 30px #00ff88' },
+          '0%': { boxShadow: '0 0 5px #10b981, 0 0 10px #10b981' },
+          '100%': { boxShadow: '0 0 10px #10b981, 0 0 18px #10b981, 0 0 24px #10b981' },
         },
       },
     },

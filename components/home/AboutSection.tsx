@@ -100,7 +100,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05, borderColor: '#00ff88' }}
+                    whileHover={{ scale: 1.05, borderColor: '#10b981' }}
                   >
                     <Icon className="w-4 h-4 md:w-5 md:h-5 text-cyber-lime flex-shrink-0" />
                     <span className="text-xs sm:text-sm text-slate-300">{highlight.text}</span>

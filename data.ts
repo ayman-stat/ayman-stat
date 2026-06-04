@@ -204,14 +204,14 @@ export const projects: Project[] = [
     technologies: ['Python', 'Classification', 'Feature Engineering', 'Model Evaluation', 'Retention Analytics'],
     status: 'Confidential business project',
     results: [
-      { metric: 'Business goal', value: 'Retention' },
-      { metric: 'Output', value: 'Risk scoring' },
-      { metric: 'Metric needed', value: 'AUC/recall' },
+      { metric: 'Model', value: '1 churn model' },
+      { metric: 'Output', value: 'Risk scores' },
+      { metric: 'Business use', value: 'Retention' },
     ],
     details: [
       'Built around a real customer retention use case in the sports and fitness domain.',
       'Designed to help teams identify members who need proactive engagement.',
-      'Model metrics and campaign impact should be added only after internal approval.',
+      'Model-performance metrics and campaign impact are kept private until approved for public sharing.',
       'No company data or confidential implementation details are published.',
     ],
   },
@@ -219,14 +219,14 @@ export const projects: Project[] = [
     id: 'data-engineering',
     title: 'Real-Time E-Commerce Data Engineering Pipeline',
     description:
-      'Public data engineering project using Kafka, PySpark Structured Streaming, a Bronze/Silver/Gold lakehouse layout, MongoDB, Power BI planning, and forecasting.',
+      'Public data engineering project using Kafka, PySpark Structured Streaming, a three-layer lakehouse layout, MongoDB, Power BI planning, and forecasting.',
     category: 'Data Engineering',
     technologies: ['Kafka', 'PySpark', 'MongoDB', 'Docker', 'Power BI', 'scikit-learn'],
     status: 'Public portfolio project',
     url: 'https://github.com/ayman-stat/Data-Engineering--DEPI',
     results: [
-      { metric: 'Architecture', value: 'Streaming' },
-      { metric: 'Layers', value: 'Bronze/Silver/Gold' },
+      { metric: 'Architecture', value: 'Kafka + Spark' },
+      { metric: 'Pipeline layers', value: '3 layers' },
       { metric: 'ML layer', value: 'Forecasting' },
     ],
     details: [
@@ -243,7 +243,7 @@ export const projects: Project[] = [
       'Public learning lab for the AWS Generative AI and AI Agents with Amazon Bedrock Professional Certificate, with runnable Boto3 examples.',
     category: 'Generative AI',
     technologies: ['AWS Bedrock', 'Boto3', 'Amazon Nova', 'Prompt Engineering', 'Responsible AI'],
-    status: 'In progress',
+    status: 'In progress learning lab',
     url: 'https://github.com/ayman-stat/aws-bedrock-genai-agents-labs',
     results: [
       { metric: 'Lab', value: 'Invoke FM' },
@@ -351,9 +351,9 @@ export const serviceAreas: ServiceArea[] = [
   },
   {
     title: 'Deep Learning',
-    outcome: 'Active professional development toward stronger neural network and production ML capability.',
-    useCases: ['Transfer learning study', 'Model serving study', 'Image/text AI labs', 'MLOps learning'],
-    tools: ['TensorFlow/Keras concepts', 'PyTorch study', 'ML Zoomcamp', 'DeepLearning.AI'],
+    outcome: 'Active diploma study toward stronger neural network, computer vision, and production ML capability.',
+    useCases: ['Neural networks', 'Computer vision study', 'Model serving study', 'Image/text AI labs'],
+    tools: ['TensorFlow/Keras concepts', 'PyTorch study', 'CSkilled Deep Learning Diploma', 'DeepLearning.AI'],
   },
 ]
 
@@ -409,6 +409,8 @@ export const education: EducationItem[] = [
 ]
 
 export const certifications: Certification[] = [
+  { id: 'depi-data-engineering', title: 'Data Engineering Scholarship - AI & Data Science Track', issuer: 'DEPI Egypt', year: 'Jun 2026', status: 'Completed' },
+  { id: 'cskilled-ml-diploma', title: 'Machine Learning Diploma', issuer: 'CSkilled Academy / Dr. Mostafa Saad', year: '2026', status: 'Completed' },
   { id: 'powerbi-depi', title: 'Microsoft Power BI Engineer', issuer: 'DEPI', year: '2024', status: 'Completed' },
   { id: 'iti-bi', title: 'Business Intelligence Developer', issuer: 'ITI, 369 hours', year: '2023', status: 'Completed' },
   { id: 'machinfy', title: 'Diploma in Data Science', issuer: 'Machinfy', year: '2022', status: 'Completed' },
@@ -419,6 +421,7 @@ export const certifications: Certification[] = [
 ]
 
 export const inProgressLearning: Certification[] = [
+  { id: 'cskilled-dl-diploma', title: 'Deep Learning Diploma', issuer: 'CSkilled Academy / Dr. Mostafa Saad', year: 'In Progress', status: 'In Progress' },
   {
     id: 'aws-bedrock',
     title: 'AWS Generative AI and AI Agents with Amazon Bedrock Professional Certificate',
@@ -431,7 +434,6 @@ export const inProgressLearning: Certification[] = [
   { id: 'deep-learning', title: 'Deep Learning Specialization', issuer: 'DeepLearning.AI / Coursera', year: 'In Progress', status: 'In Progress' },
   { id: 'ml-specialization', title: 'Machine Learning Specialization', issuer: 'DeepLearning.AI / Stanford / Coursera', year: 'In Progress', status: 'In Progress' },
   { id: 'ml-production', title: 'ML in Production', issuer: 'DeepLearning.AI / Coursera', year: 'In Progress', status: 'In Progress' },
-  { id: 'depi-data-engineering', title: 'Data Engineering Scholarship - AI & Data Science Track', issuer: 'DEPI Egypt', year: 'In Progress', status: 'In Progress' },
 ]
 
 export const testimonials: Testimonial[] = [
@@ -490,7 +492,7 @@ export const timeline = [
   { year: '2023', title: 'Credit Agricole Egypt', description: 'Supported Retail Risk, IFRS 9 analysis, credit KPI dashboards, and reporting automation.', icon: '' },
   { year: '2024', title: 'IDH consulting', description: 'Expanded into healthcare analytics, operational forecasting, dashboards, and data science consulting.', icon: '' },
   { year: '2025', title: 'Leejam Sports Company', description: 'Lead analytics work for business performance, retention analytics, dashboards, and churn modeling.', icon: '' },
-  { year: '2026', title: 'GenAI and cloud AI portfolio', description: 'Building public AWS Bedrock and ML engineering labs to strengthen AI engineering positioning.', icon: '' },
+  { year: '2026', title: 'Data engineering and AI specialization', description: 'Completed DEPI Data Engineering Scholarship and CSkilled ML Diploma; continuing Deep Learning and AWS Bedrock work.', icon: '' },
 ]
 
 export const blogPosts = [

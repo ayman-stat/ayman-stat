@@ -25,7 +25,7 @@ export default function GlowButton({
   
   const variantClasses = {
     primary: 'bg-gradient-to-r from-data-blue to-cyber-lime text-white hover:shadow-lg hover:shadow-cyber-lime/50',
-    secondary: 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:shadow-lg hover:shadow-purple-500/50',
+    secondary: 'bg-gradient-to-r from-slate-700 to-data-blue text-white hover:shadow-lg hover:shadow-data-blue/40',
     outline: 'bg-slate-dark/50 border-2 border-cyber-lime text-cyber-lime hover:bg-cyber-lime/10',
   }
 

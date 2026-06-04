@@ -6,11 +6,11 @@ import { Code, Database, Cloud, BarChart3, Settings, Award, Brain, Users } from 
 
 const categoryIcons: Record<string, any> = {
   'Programming & Analysis': Code,
-  'Machine Learning & Modeling': Brain,
-  'Business Intelligence': BarChart3,
-  'Data Engineering & Cloud': Database,
+  'Machine Learning': Brain,
+  'BI & Executive Analytics': BarChart3,
+  'Data Engineering': Database,
   'Generative AI': Cloud,
-  'Leadership & Delivery': Users,
+  'Business & Leadership': Users,
 }
 
 export default function SkillsPage() {
@@ -27,7 +27,7 @@ export default function SkillsPage() {
             Skills & Learning
           </h1>
           <p className="text-slate-400 text-lg">
-            A practical stack for predictive modeling, analytics delivery, BI, cloud learning, and production-minded ML.
+            A practical stack for predictive modeling, analytics delivery, BI, data engineering, deep learning study, and production-minded ML.
           </p>
         </motion.div>
 

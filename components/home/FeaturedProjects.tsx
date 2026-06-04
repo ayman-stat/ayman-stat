@@ -35,7 +35,7 @@ export default function FeaturedProjects() {
               viewport={{ once: true }}
               transition={{ delay: index * 0.2 }}
             >
-              <div className="relative h-full bg-slate-dark/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 md:p-8 overflow-hidden group-hover:border-cyber-lime/50 transition-all duration-300">
+              <div className="relative h-full bg-slate-dark/60 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 md:p-8 overflow-hidden group-hover:border-cyber-lime/50 transition-all duration-300">
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-cyber-lime/5 to-data-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
@@ -59,16 +59,16 @@ export default function FeaturedProjects() {
                   <p className="text-sm sm:text-base text-slate-400 mb-4 md:mb-6 leading-relaxed">{project.description}</p>
 
                   {/* Results */}
-                  <div className="grid grid-cols-2 gap-3 md:gap-4 mb-4 md:mb-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 xl:grid-cols-3 gap-3 md:gap-4 mb-4 md:mb-6">
                     {project.results.map((result, i) => (
                       <div
                         key={i}
-                        className="bg-slate-800/50 border border-slate-700 rounded-lg p-2.5 md:p-3"
+                        className="min-w-0 bg-slate-800/60 border border-slate-700 rounded-lg p-3"
                       >
-                        <div className="text-xl sm:text-2xl font-bold text-cyber-lime mb-1">
+                        <div className="text-lg sm:text-xl font-bold text-cyber-lime mb-1 leading-tight break-words">
                           {result.value}
                         </div>
-                        <div className="text-[10px] sm:text-xs text-slate-400 leading-tight">{result.metric}</div>
+                        <div className="text-[10px] sm:text-xs text-slate-400 leading-tight break-words">{result.metric}</div>
                       </div>
                     ))}
                   </div>

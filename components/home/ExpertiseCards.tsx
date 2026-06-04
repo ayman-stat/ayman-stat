@@ -71,7 +71,7 @@ export default function ExpertiseCards() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.3 + i * 0.05 }}
-                        whileHover={{ scale: 1.1, borderColor: '#00ff88' }}
+                        whileHover={{ scale: 1.1, borderColor: '#10b981' }}
                       >
                         {tech}
                       </motion.span>

@@ -64,7 +64,7 @@ export default function SkillsMatrix() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.2 + i * 0.05 }}
-                      whileHover={{ scale: 1.1, borderColor: '#00ff88', color: '#00ff88' }}
+                      whileHover={{ scale: 1.1, borderColor: '#10b981', color: '#10b981' }}
                     >
                       {item}
                     </motion.span>

@@ -20,7 +20,7 @@ export default function EducationSection() {
             Education & <GradientText>Development</GradientText>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg max-w-3xl mx-auto">
-            Formal statistics background, completed analytics training, and current GenAI/ML engineering study.
+            Formal statistics background, completed analytics/ML/data engineering training, and current deep learning and GenAI study.
           </p>
         </motion.div>
 
@@ -85,7 +85,7 @@ export default function EducationSection() {
               {inProgressLearning.map((item) => (
                 <div key={item.id} className="rounded-lg border border-slate-700 bg-slate-dark/40 p-3">
                   <h4 className="text-sm text-white font-semibold">{item.title}</h4>
-                  <p className="text-xs text-slate-400">{item.issuer}</p>
+                  <p className="text-xs text-slate-400">{item.issuer} | {item.status}</p>
                 </div>
               ))}
             </div>

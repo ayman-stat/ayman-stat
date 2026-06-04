@@ -23,13 +23,10 @@ export default function ProjectsPage() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.id}
-              className="bg-slate-dark/50 backdrop-blur-sm border border-slate-700 rounded-xl p-8 hover:border-cyber-lime/50 transition-all duration-300 group relative overflow-hidden"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="bg-slate-dark/60 backdrop-blur-sm border border-slate-700 rounded-xl p-6 sm:p-8 hover:border-cyber-lime/50 transition-all duration-300 group relative overflow-hidden"
               whileHover={{ scale: 1.02, y: -5 }}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-cyber-lime/5 to-data-blue/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -69,16 +66,16 @@ export default function ProjectsPage() {
                   <h5 className="text-sm font-semibold text-slate-300 mb-3 uppercase tracking-wide">
                     Key Results
                   </h5>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-2 xl:grid-cols-3 gap-4">
                     {project.results.map((result, i) => (
                       <div
                         key={i}
-                        className="bg-slate-800/50 border border-slate-700 rounded-lg p-3"
+                        className="min-w-0 bg-slate-800/60 border border-slate-700 rounded-lg p-3"
                       >
-                        <div className="text-2xl font-bold text-cyber-lime mb-1">
+                        <div className="text-lg sm:text-xl font-bold text-cyber-lime mb-1 leading-tight break-words">
                           {result.value}
                         </div>
-                        <div className="text-xs text-slate-400">{result.metric}</div>
+                        <div className="text-xs text-slate-400 leading-tight break-words">{result.metric}</div>
                       </div>
                     ))}
                   </div>

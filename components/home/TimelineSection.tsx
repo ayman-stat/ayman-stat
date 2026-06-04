@@ -120,7 +120,7 @@ export default function TimelineSection() {
               <motion.div
                 key={index}
                 className="w-2 h-2 rounded-full bg-slate-700"
-                whileHover={{ scale: 1.5, backgroundColor: '#00ff88' }}
+                whileHover={{ scale: 1.5, backgroundColor: '#10b981' }}
               />
             ))}
           </div>

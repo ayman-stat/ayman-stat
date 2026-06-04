@@ -33,7 +33,7 @@ export default function Header() {
             whileTap={{ scale: 0.95 }}
           >
             {/* MA Logo Box */}
-            <div className="relative p-2 sm:p-2.5 bg-gradient-to-br from-cyber-lime via-data-blue to-purple-500 rounded-lg shadow-lg shadow-cyber-lime/20">
+            <div className="relative p-2 sm:p-2.5 bg-gradient-to-br from-cyber-lime via-data-blue to-cyan-500 rounded-lg shadow-lg shadow-cyber-lime/20">
               <div className="absolute inset-0 bg-gradient-to-br from-cyber-lime/20 to-data-blue/20 rounded-lg blur-sm" />
               <span className="relative text-base sm:text-lg font-extrabold text-white tracking-tight">
                 MA

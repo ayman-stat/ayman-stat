@@ -13,6 +13,9 @@ I combine data science, business intelligence, stakeholder communication, and pr
 - Develop executive BI dashboards and semantic models for KPI tracking and business storytelling.
 - Grow deeper capability in Generative AI, AI agents, AWS AI, Amazon Bedrock, deep learning, and ML in production.
 - Complete the [AWS Generative AI and AI Agents with Amazon Bedrock Professional Certificate](https://www.coursera.org/professional-certificates/aws-generative-ai-developers) on Coursera.
+- Completed the DEPI Egypt Data Engineering Scholarship, AI & Data Science Track.
+- Completed the Machine Learning Diploma with CSkilled Academy / Dr. Mostafa Saad.
+- Studying the Deep Learning Diploma with CSkilled Academy / Dr. Mostafa Saad.
 - Continue M.Sc. Data Science studies at Cairo University.
 
 ## Selected Work
@@ -21,7 +24,7 @@ I combine data science, business intelligence, stakeholder communication, and pr
 
 Public project: [Data-Engineering--DEPI](https://github.com/ayman-stat/Data-Engineering--DEPI)
 
-Built a local real-time analytics pipeline using Kafka, PySpark Structured Streaming, a Bronze/Silver/Gold lakehouse structure, MongoDB, Power BI planning, and an ML forecasting layer.
+Built a local real-time analytics pipeline using Kafka, PySpark Structured Streaming, a three-layer lakehouse structure, MongoDB, Power BI planning, and an ML forecasting layer.
 
 ### Customer Churn Prediction & Retention Analytics
 
@@ -57,10 +60,13 @@ Supported Retail Risk analytics through automated reporting, Power BI dashboards
 **ML & AI:** scikit-learn, model evaluation, feature engineering, churn prediction, credit risk analytics, ML production concepts  
 **Current AI Development:** Generative AI, AI agents, AWS AI, Amazon Bedrock, AWS Generative AI and AI Agents with Amazon Bedrock Professional Certificate (Coursera, in progress), DeepLearning.AI specializations
 
+**Recent Development:** DEPI Egypt Data Engineering Scholarship, CSkilled Academy Machine Learning Diploma, CSkilled Academy Deep Learning Diploma in progress
+
 ## Professional Development In Progress
 
 - [AWS Generative AI and AI Agents with Amazon Bedrock Professional Certificate](https://www.coursera.org/professional-certificates/aws-generative-ai-developers), Coursera
-- Deep learning, ML in production, and data engineering learning paths aligned with production-minded AI and analytics roles.
+- CSkilled Academy Deep Learning Diploma with Dr. Mostafa Saad
+- DeepLearning.AI, ML in production, and GenAI learning paths aligned with production-minded AI and analytics roles.
 
 ## Professional Direction
 
