@@ -33,7 +33,7 @@ export default function TimelineSection() {
             Career <GradientText>Timeline</GradientText>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-            A journey of growth, impact, and continuous learning
+            Career milestones across analytics, BI, data science, and AI-focused professional development.
           </p>
         </motion.div>
 
@@ -89,7 +89,6 @@ export default function TimelineSection() {
                   <div className="relative z-10">
                     {/* Year Badge */}
                     <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-data-blue to-cyber-lime rounded-full mb-4 sm:mb-6">
-                      <span className="text-xl sm:text-2xl">{item.icon}</span>
                       <span className="text-lg sm:text-xl font-bold text-white">{item.year}</span>
                     </div>
 
@@ -134,7 +133,7 @@ export default function TimelineSection() {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
         >
-          <span>← Swipe to explore →</span>
+          <span>Swipe to explore</span>
         </motion.div>
       </div>
 

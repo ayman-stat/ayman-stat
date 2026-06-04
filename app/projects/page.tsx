@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { projects } from '@/data'
+import { projects, socialLinks } from '@/data'
 import { ExternalLink, CheckCircle2 } from 'lucide-react'
 
 export default function ProjectsPage() {
@@ -15,10 +15,10 @@ export default function ProjectsPage() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-cyber-lime to-data-blue bg-clip-text text-transparent">
-            Featured Projects
+            Use Case Library
           </h1>
           <p className="text-slate-400 text-lg">
-            Case studies of ML/BI solutions and their business impact
+            Selected public labs and sanitized business projects across analytics, BI, ML, and AI.
           </p>
         </motion.div>
 
@@ -36,9 +36,14 @@ export default function ProjectsPage() {
               <div className="relative z-10">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <span className="inline-block px-3 py-1 bg-gradient-to-r from-data-blue to-cyber-lime rounded-full text-xs font-semibold text-white mb-3">
-                      {project.category}
-                    </span>
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <span className="inline-block px-3 py-1 bg-gradient-to-r from-data-blue to-cyber-lime rounded-full text-xs font-semibold text-white">
+                        {project.category}
+                      </span>
+                      <span className="inline-block px-3 py-1 border border-slate-700 rounded-full text-xs font-medium text-slate-300">
+                        {project.status}
+                      </span>
+                    </div>
                     <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyber-lime transition-colors">
                       {project.title}
                     </h3>
@@ -46,6 +51,18 @@ export default function ProjectsPage() {
                 </div>
 
                 <p className="text-slate-400 mb-6 leading-relaxed">{project.description}</p>
+                {project.url && (
+                  <motion.a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-cyber-lime hover:text-white transition-colors mb-6 text-sm font-semibold"
+                    whileHover={{ x: 4 }}
+                  >
+                    Open public repository
+                    <ExternalLink className="w-4 h-4" />
+                  </motion.a>
+                )}
 
                 {/* Results */}
                 <div className="mb-6">
@@ -115,7 +132,7 @@ export default function ProjectsPage() {
             studies and client testimonials.
           </p>
           <motion.a
-            href="https://www.upwork.com/freelancers/~014329e93fb9620b00"
+            href={socialLinks.upwork}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-data-blue to-cyber-lime rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-cyber-lime/50 transition-all"

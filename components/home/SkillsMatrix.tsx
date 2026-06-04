@@ -8,12 +8,12 @@ import GradientText from '@/components/shared/GradientText'
 import Link from 'next/link'
 
 const categoryIcons: Record<string, any> = {
-  'Programming Languages': Code,
-  'Data Science & ML': BarChart3,
-  'Data Visualization': BarChart3,
-  'Cloud & Big Data': Cloud,
-  Databases: Database,
-  'Tools & Frameworks': Settings,
+  'Programming & Analysis': Code,
+  'Machine Learning': BarChart3,
+  'BI & Executive Analytics': BarChart3,
+  'Data Engineering': Database,
+  'Generative AI': Cloud,
+  'Business & Leadership': Settings,
 }
 
 export default function SkillsMatrix() {
@@ -27,10 +27,10 @@ export default function SkillsMatrix() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
-            Skills <GradientText>Matrix</GradientText>
+            Skills <GradientText>Map</GradientText>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-            Comprehensive expertise across the data science stack
+            A concise map of the tools and practices behind the use cases above.
           </p>
         </motion.div>
 
@@ -52,19 +52,6 @@ export default function SkillsMatrix() {
                     <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold text-white">{skillCategory.category}</h3>
-                </div>
-
-                {/* Progress Bar Representation */}
-                <div className="mb-3 sm:mb-4">
-                  <div className="h-1.5 sm:h-2 bg-slate-800 rounded-full overflow-hidden">
-                    <motion.div
-                      className="h-full bg-gradient-to-r from-data-blue to-cyber-lime"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: '85%' }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: index * 0.1 }}
-                    />
-                  </div>
                 </div>
 
                 {/* Skills Tags */}

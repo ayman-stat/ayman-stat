@@ -2,8 +2,11 @@
 
 import { motion } from 'framer-motion'
 import { expertiseAreas } from '@/data'
+import { Brain, Cloud, DatabaseZap, LineChart, Network, Sigma } from 'lucide-react'
 import SectionWrapper from '@/components/shared/SectionWrapper'
 import GradientText from '@/components/shared/GradientText'
+
+const icons = [Sigma, LineChart, Brain, Cloud, DatabaseZap, Network]
 
 export default function ExpertiseCards() {
   return (
@@ -16,15 +19,17 @@ export default function ExpertiseCards() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
-            Core <GradientText>Expertise</GradientText>
+            Real <GradientText>Use Cases</GradientText>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-            Three pillars of expertise that drive business transformation
+            The portfolio is organized around work buyers and hiring managers can recognize.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {expertiseAreas.map((expertise, index) => (
+          {expertiseAreas.map((expertise, index) => {
+            const Icon = icons[index] || LineChart
+            return (
             <motion.div
               key={expertise.id}
               className="group relative"
@@ -35,7 +40,7 @@ export default function ExpertiseCards() {
             >
               <motion.div
                 className="relative h-full bg-slate-dark/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 md:p-8 overflow-hidden"
-                whileHover={{ scale: 1.02, y: -10 }}
+                whileHover={{ y: -6 }}
                 transition={{ duration: 0.3 }}
               >
                 {/* Gradient Overlay */}
@@ -44,8 +49,9 @@ export default function ExpertiseCards() {
                 />
 
                 <div className="relative z-10">
-                  {/* Icon */}
-                  <div className="text-5xl md:text-6xl mb-4 md:mb-6">{expertise.icon}</div>
+                  <div className="w-12 h-12 rounded-xl border border-cyber-lime/20 bg-cyber-lime/10 flex items-center justify-center mb-5">
+                    <Icon className="w-6 h-6 text-cyber-lime" />
+                  </div>
 
                   {/* Title */}
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-3 md:mb-4 group-hover:text-cyber-lime transition-colors">
@@ -74,15 +80,13 @@ export default function ExpertiseCards() {
 
                   {/* Achievement */}
                   <div className="pt-4 md:pt-6 border-t border-slate-700">
-                    <div className="flex items-center gap-2">
-                      <span className="text-cyber-lime font-bold text-base md:text-lg">✨</span>
-                      <span className="text-xs sm:text-sm text-slate-300">{expertise.achievement}</span>
-                    </div>
+                    <span className="text-xs sm:text-sm text-slate-300">{expertise.achievement}</span>
                   </div>
                 </div>
               </motion.div>
             </motion.div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </SectionWrapper>

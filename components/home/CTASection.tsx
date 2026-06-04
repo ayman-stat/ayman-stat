@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Calendar, Mail, Linkedin, Copy, Check } from 'lucide-react'
+import { Mail, Linkedin, Copy, Check, Briefcase, Github } from 'lucide-react'
 import { socialLinks } from '@/data'
 import SectionWrapper from '@/components/shared/SectionWrapper'
 import GradientText from '@/components/shared/GradientText'
@@ -19,8 +19,7 @@ export default function CTASection() {
 
   return (
     <SectionWrapper className="relative overflow-hidden">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-midnight-blue via-purple-900/20 to-midnight-blue" />
+      <div className="absolute inset-0 bg-gradient-to-br from-midnight-blue via-data-blue/10 to-midnight-blue" />
       <motion.div
         className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0.1),transparent_50%)]"
         animate={{
@@ -40,7 +39,7 @@ export default function CTASection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Ready to Transform <GradientText gradient="from-purple-500 to-pink-500">Your Data?</GradientText>
+          Discuss a Data, Analytics, or <GradientText>AI Project</GradientText>
         </motion.h2>
 
         <motion.p
@@ -50,8 +49,8 @@ export default function CTASection() {
           viewport={{ once: true }}
           transition={{ delay: 0.2 }}
         >
-          Let&apos;s discuss how I can help drive your business forward with data-driven insights and
-          machine learning solutions.
+          I am open to senior data science, analytics lead, ML engineering, and focused freelance
+          engagements where business context matters as much as technical delivery.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -63,16 +62,16 @@ export default function CTASection() {
           transition={{ delay: 0.4 }}
         >
           <GlowButton href={`mailto:${socialLinks.email}`} variant="primary" icon={<Mail size={18} className="sm:w-5 sm:h-5" />}>
-            Schedule a Consultation
+            Email Mohamed
           </GlowButton>
-          <GlowButton href="#projects" variant="secondary">
-            View My Projects
+          <GlowButton href={socialLinks.upwork} variant="secondary" icon={<Briefcase size={18} className="sm:w-5 sm:h-5" />}>
+            Upwork Profile
           </GlowButton>
         </motion.div>
 
         {/* Contact Options */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-6 sm:mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -96,6 +95,17 @@ export default function CTASection() {
           >
             <Linkedin className="w-4 h-4 sm:w-5 sm:h-5 text-cyber-lime" />
             <span className="text-sm sm:text-base text-slate-300">LinkedIn</span>
+          </motion.a>
+
+          <motion.a
+            href={socialLinks.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 sm:gap-3 p-3 sm:p-4 bg-slate-dark/50 backdrop-blur-sm border border-slate-700 rounded-lg hover:border-cyber-lime/50 transition-all"
+            whileHover={{ scale: 1.05 }}
+          >
+            <Github className="w-4 h-4 sm:w-5 sm:h-5 text-cyber-lime" />
+            <span className="text-sm sm:text-base text-slate-300">GitHub</span>
           </motion.a>
 
           <motion.button
@@ -126,12 +136,12 @@ export default function CTASection() {
           transition={{ delay: 0.8 }}
         >
           <div className="flex items-center gap-2">
-            <span className="text-cyber-lime">✓</span>
-            <span>Response within 24 hours</span>
+            <Check className="w-4 h-4 text-cyber-lime" />
+            <span>Remote and hybrid friendly</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-cyber-lime">✓</span>
-            <span>Free initial consultation</span>
+            <Check className="w-4 h-4 text-cyber-lime" />
+            <span>Confidential projects handled carefully</span>
           </div>
         </motion.div>
       </div>

@@ -18,7 +18,7 @@ export default function ExperiencePage() {
             Professional Experience
           </h1>
           <p className="text-slate-400 text-lg">
-            A journey from Data Analyst to Lead Data Scientist
+            Verified career path across sports, healthcare, banking, telecom, and freelance analytics.
           </p>
         </motion.div>
 
@@ -74,7 +74,7 @@ export default function ExperiencePage() {
                     {/* Achievements */}
                     <div className="mb-4">
                       <h5 className="text-sm font-semibold text-slate-300 mb-3 uppercase tracking-wide">
-                        Key Achievements
+                        Scope & Impact
                       </h5>
                       <ul className="space-y-2">
                         {exp.achievements.map((achievement, i) => (

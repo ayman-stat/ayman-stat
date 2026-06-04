@@ -1,140 +1,58 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Download, ArrowDown, Linkedin, Mail } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
 import { hero, socialLinks } from '@/data'
 import GlowButton from '@/components/shared/GlowButton'
 import GradientText from '@/components/shared/GradientText'
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
 
 export default function HeroSection() {
-  const [currentRoleIndex, setCurrentRoleIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentRoleIndex(prev => (prev + 1) % hero.roles.length)
-    }, 3000)
-    return () => clearInterval(interval)
-  }, [])
-
   return (
     <section className="min-h-screen flex flex-col justify-center relative overflow-hidden pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-midnight-blue via-slate-dark to-midnight-blue" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,136,0.1),transparent_50%)]" />
-
-      {/* Floating Particles */}
-      {[...Array(20)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute w-1 h-1 bg-cyber-lime rounded-full opacity-30"
-          style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-          animate={{
-            y: [0, -30, 0],
-            opacity: [0.3, 0.6, 0.3],
-          }}
-          transition={{
-            duration: 3 + Math.random() * 2,
-            repeat: Infinity,
-            delay: Math.random() * 2,
-          }}
-        />
-      ))}
+      <div className="absolute inset-0 bg-midnight-blue" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-cyber-lime/40 to-transparent" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 relative z-10 flex-1 flex flex-col">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center flex-1">
           {/* Left Column - Text Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mt-8 lg:mt-0 lg:text-left"
-          >
-            {/* Badges */}
-            {/* <motion.div
-              className="flex flex-wrap justify-center lg:justify-start gap-2 md:gap-3 mb-4 md:mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              {hero.badges.map((badge, index) => (
-                <motion.span
-                  key={index}
-                  className="px-3 py-1.5 md:px-4 md:py-2 bg-slate-dark/50 backdrop-blur-sm border border-slate-700 rounded-full text-xs md:text-sm text-slate-300"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.3 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, borderColor: '#00ff88' }}
-                >
-                  {badge.icon} {badge.label}
-                </motion.span>
-              ))}
-            </motion.div> */}
-
+          <div className="text-center mt-8 lg:mt-0 lg:text-left">
             {/* Name */}
             <motion.h1
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold mb-3 md:mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
+              className="text-3xl sm:text-5xl md:text-6xl lg:text-6xl font-bold mb-4 md:mb-5 leading-tight break-words max-w-[21rem] sm:max-w-none mx-auto lg:mx-0"
             >
               <GradientText>{hero.name}</GradientText>
             </motion.h1>
 
-            {/* Dynamic Role */}
+            {/* Role */}
             <motion.div
-              className="h-14 sm:h-16 md:h-20 mb-3 md:mb-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
+              className="text-lg sm:text-2xl md:text-3xl text-slate-200 font-semibold mb-4 leading-tight max-w-[20rem] sm:max-w-none mx-auto lg:mx-0"
             >
               {hero.roles.map((role, index) => (
-                <motion.p
-                  key={role}
-                  className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-slate-300 font-semibold"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{
-                    opacity: currentRoleIndex === index ? 1 : 0,
-                    y: currentRoleIndex === index ? 0 : 20,
-                  }}
-                  transition={{ duration: 0.5 }}
-                  style={{ position: index === currentRoleIndex ? 'relative' : 'absolute' }}
-                >
+                <span key={role} className="block md:inline">
                   {role}
-                </motion.p>
+                  {index < hero.roles.length - 1 && <span className="hidden md:inline"> | </span>}
+                </span>
               ))}
             </motion.div>
 
             {/* Tagline */}
             <motion.p
-              className="text-base sm:text-lg md:text-xl text-slate-400 mb-6 md:mb-8 max-w-2xl mx-auto lg:mx-0"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.8 }}
+              className="text-base sm:text-lg md:text-xl text-cyber-lime mb-5 md:mb-6 max-w-[20rem] sm:max-w-2xl mx-auto lg:mx-0 font-medium"
             >
               {hero.tagline}
             </motion.p>
 
             {/* Bio */}
             <motion.p
-              className="text-sm sm:text-base text-slate-400 mb-8 md:mb-10 max-w-2xl mx-auto lg:mx-0 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1 }}
+              className="text-sm sm:text-base text-slate-300 mb-8 md:mb-10 max-w-[21rem] sm:max-w-2xl mx-auto lg:mx-0 leading-relaxed"
             >
               {hero.bio}
             </motion.p>
 
             {/* CTA Buttons */}
             <motion.div
-              className="flex flex-wrap justify-center lg:justify-start gap-3 md:gap-4 mb-8 md:mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2 }}
+              className="flex flex-col sm:flex-row flex-wrap items-stretch sm:items-center justify-center lg:justify-start gap-3 md:gap-4 mb-8 md:mb-12 max-w-[18rem] sm:max-w-none mx-auto lg:mx-0"
             >
               <GlowButton
                 href={hero.cta.primary.href}
@@ -146,7 +64,6 @@ export default function HeroSection() {
               <GlowButton
                 href={hero.cta.secondary.href}
                 variant="outline"
-                icon={<Download size={18} className="md:w-5 md:h-5" />}
                 className="text-sm md:text-base px-5 md:px-6 py-2.5 md:py-3"
               >
                 {hero.cta.secondary.text}
@@ -163,9 +80,6 @@ export default function HeroSection() {
             {/* Social Links */}
             <motion.div
               className="flex items-center justify-center lg:justify-start gap-3 md:gap-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.4 }}
             >
               <motion.a
                 href={socialLinks.linkedin}
@@ -179,6 +93,17 @@ export default function HeroSection() {
                 <Linkedin size={20} className="md:w-6 md:h-6" />
               </motion.a>
               <motion.a
+                href={socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 md:p-3 bg-slate-dark/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:text-cyber-lime hover:border-cyber-lime transition-colors"
+                whileHover={{ scale: 1.1, rotate: 0 }}
+                whileTap={{ scale: 0.9 }}
+                aria-label="GitHub Profile"
+              >
+                <Github size={20} className="md:w-6 md:h-6" />
+              </motion.a>
+              <motion.a
                 href={`mailto:${socialLinks.email}`}
                 className="p-2.5 md:p-3 bg-slate-dark/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:text-cyber-lime hover:border-cyber-lime transition-colors"
                 whileHover={{ scale: 1.1, rotate: 0 }}
@@ -188,35 +113,27 @@ export default function HeroSection() {
                 <Mail size={20} className="md:w-6 md:h-6" />
               </motion.a>
             </motion.div>
-          </motion.div>
+          </div>
 
           {/* Right Column - Profile Image Placeholder */}
-          <motion.div
-            className="relative mt-8 lg:mt-0"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <div className="relative mt-8 lg:mt-0">
             <div className="relative w-full max-w-sm md:max-w-md mx-auto">
-              {/* Glowing Border */}
-              <motion.div
-                className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyber-lime via-data-blue to-cyber-lime opacity-75 blur-xl"
-                animate={{
-                  scale: [1, 1.05, 1],
-                  opacity: [0.5, 0.75, 0.5],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                }}
-              />
-
-              {/* Image Container */}
-              <div className="relative bg-slate-dark/50 backdrop-blur-lg border-2 border-cyber-lime/50 rounded-2xl  aspect-auto flex flex-col items-center justify-center">
-              <Image src="/logo.jpg" alt="nn" width={500} height={500} className='w-full h-full rounded-2xl' />
+              <div className="relative bg-slate-dark/70 border border-slate-700 rounded-2xl p-3 shadow-2xl shadow-black/20">
+                <Image
+                  src={hero.image}
+                  alt="Mohamed Ayman professional portrait"
+                  width={500}
+                  height={500}
+                  priority
+                  className="w-full h-full rounded-xl object-cover"
+                />
+                <div className="absolute -bottom-4 left-6 right-6 rounded-xl border border-slate-700 bg-midnight-blue/95 p-4 shadow-xl">
+                  <p className="text-xs uppercase tracking-[0.2em] text-slate-500 mb-1">Portfolio focus</p>
+                  <p className="text-sm text-slate-200">Data science, BI, ML engineering, and practical GenAI labs.</p>
+                </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Scroll Indicator - At the bottom of the section */}

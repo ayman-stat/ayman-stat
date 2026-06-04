@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Linkedin, Briefcase, Mail, Heart, MapPin, Clock, Phone } from 'lucide-react'
+import { Linkedin, Briefcase, Mail, MapPin, Clock, Phone, Github } from 'lucide-react'
 import { socialLinks, hero } from '@/data'
 import Link from 'next/link'
 import GradientText from '@/components/shared/GradientText'
@@ -49,6 +49,18 @@ export default function Footer() {
                 <Briefcase size={18} className="sm:w-5 sm:h-5" />
               </motion.a>
               <motion.a
+                href={socialLinks.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-1.5 sm:p-2 bg-slate-dark/50 border border-slate-700 rounded-lg text-slate-400 hover:text-cyber-lime hover:border-cyber-lime transition-colors"
+                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileTap={{ scale: 0.9 }}
+                title="GitHub"
+                aria-label="GitHub Profile"
+              >
+                <Github size={18} className="sm:w-5 sm:h-5" />
+              </motion.a>
+              <motion.a
                 href={`mailto:${socialLinks.email}`}
                 className="p-1.5 sm:p-2 bg-slate-dark/50 border border-slate-700 rounded-lg text-slate-400 hover:text-cyber-lime hover:border-cyber-lime transition-colors"
                 whileHover={{ scale: 1.1, rotate: 5 }}
@@ -77,6 +89,7 @@ export default function Footer() {
                 { href: '/experience', label: 'Experience' },
                 { href: '/projects', label: 'Projects' },
                 { href: '/skills', label: 'Skills' },
+                { href: '/#cv', label: 'CV' },
               ].map(link => (
                 <li key={link.href}>
                   <Link
@@ -113,7 +126,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2 text-slate-400">
                 <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-cyber-lime flex-shrink-0" />
-                <span>Cairo, Egypt 🇪🇬</span>
+                <span>Cairo, Egypt</span>
               </li>
               <li className="flex items-center gap-2 text-slate-400">
                 <Phone className="w-3 h-3 sm:w-4 sm:h-4 text-cyber-lime flex-shrink-0" />
@@ -143,9 +156,7 @@ export default function Footer() {
             <span>© {currentYear} Mohamed Ayman. All rights reserved.</span>
           </div>
           <div className="flex items-center gap-2 text-slate-400 text-xs sm:text-sm">
-            <span>Built with</span>
-            <Heart className="w-3 h-3 sm:w-4 sm:h-4 text-cyber-lime fill-cyber-lime" />
-            <span>using Next.js, TypeScript & Framer Motion</span>
+            <span>Portfolio focused on data science, analytics, ML engineering, and practical GenAI.</span>
           </div>
         </motion.div>
       </div>

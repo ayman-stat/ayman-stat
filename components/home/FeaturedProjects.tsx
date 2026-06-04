@@ -18,10 +18,10 @@ export default function FeaturedProjects() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
-            Featured <GradientText>Projects</GradientText>
+            Selected <GradientText>Use Cases</GradientText>
           </h2>
           <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-            Real-world solutions delivering measurable business impact
+            Public portfolio work and carefully described confidential business projects.
           </p>
         </motion.div>
 
@@ -44,6 +44,11 @@ export default function FeaturedProjects() {
                   <span className="inline-block px-3 py-1 bg-gradient-to-r from-data-blue to-cyber-lime rounded-full text-xs font-semibold text-white mb-3 md:mb-4">
                     {project.category}
                   </span>
+                  {project.status && (
+                    <span className="ml-2 inline-block px-3 py-1 border border-slate-600 rounded-full text-xs font-medium text-slate-300 mb-3 md:mb-4">
+                      {project.status}
+                    </span>
+                  )}
 
                   {/* Title */}
                   <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 md:mb-3 group-hover:text-cyber-lime transition-colors">
@@ -81,10 +86,22 @@ export default function FeaturedProjects() {
                   </div>
 
                   {/* View Details Link */}
-                  <Link href="/projects" className="inline-flex items-center gap-2 text-cyber-lime hover:gap-3 transition-all">
-                    <span className="text-xs sm:text-sm font-semibold">View Details</span>
-                    <ArrowRight size={14} className="sm:w-4 sm:h-4" />
-                  </Link>
+                  {project.url ? (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-cyber-lime hover:gap-3 transition-all"
+                    >
+                      <span className="text-xs sm:text-sm font-semibold">Open Repository</span>
+                      <ExternalLink size={14} className="sm:w-4 sm:h-4" />
+                    </a>
+                  ) : (
+                    <Link href="/projects" className="inline-flex items-center gap-2 text-cyber-lime hover:gap-3 transition-all">
+                      <span className="text-xs sm:text-sm font-semibold">View Details</span>
+                      <ArrowRight size={14} className="sm:w-4 sm:h-4" />
+                    </Link>
+                  )}
                 </div>
               </div>
             </motion.div>

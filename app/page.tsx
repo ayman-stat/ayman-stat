@@ -8,7 +8,8 @@ import FeaturedProjects from '@/components/home/FeaturedProjects'
 import TimelineSection from '@/components/home/TimelineSection'
 import SkillsMatrix from '@/components/home/SkillsMatrix'
 import TestimonialsCarousel from '@/components/home/TestimonialsCarousel'
-import BlogPreview from '@/components/home/BlogPreview'
+import EducationSection from '@/components/home/EducationSection'
+import ResumeSection from '@/components/home/ResumeSection'
 import CTASection from '@/components/home/CTASection'
 
 export default function Home() {
@@ -21,8 +22,9 @@ export default function Home() {
       <FeaturedProjects />
       <TimelineSection />
       <SkillsMatrix />
+      <EducationSection />
       <TestimonialsCarousel />
-      <BlogPreview />
+      <ResumeSection />
       <CTASection />
     </main>
   )

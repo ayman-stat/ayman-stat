@@ -1,4 +1,4 @@
-# Mohamed Ayman Ghareeb
+# Mohamed Ayman Ghareb
 
 **Senior Data Scientist | Lead Analytics | ML Engineering | Business Intelligence | Generative AI in Progress**
 
@@ -68,5 +68,6 @@ I am focused on Senior Data Scientist, Lead Data Scientist, ML Engineer, AI Engi
 
 ## Connect
 
+- Portfolio: [mohamedaymanstat.vercel.app](https://mohamedaymanstat.vercel.app/)
 - LinkedIn: [linkedin.com/in/mohamed-ghareb](https://www.linkedin.com/in/mohamed-ghareb/)
 - Email: [mohammed.ayman.stat@gmail.com](mailto:mohammed.ayman.stat@gmail.com)

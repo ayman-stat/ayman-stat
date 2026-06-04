@@ -1,38 +1,21 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { Home, FolderOpen, Code, ChevronDown, Briefcase, Menu as MenuIcon, X } from 'lucide-react'
+import { Home, FolderOpen, Code, Briefcase, Menu as MenuIcon, X } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Menu, Transition } from '@headlessui/react'
-import { Fragment, useState } from 'react'
-import Image from 'next/image'
+import { useState } from 'react'
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
   { href: '/experience', label: 'Experience', icon: Code },
   { href: '/projects', label: 'Projects', icon: FolderOpen },
   { href: '/skills', label: 'Skills', icon: Code },
-]
-
-const languages = [
-  {
-    code: 'ar',
-    name: 'العربية',
-    flag: 'https://flagcdn.com/w40/sa.png',
-    flagAlt: 'Saudi Arabia Flag',
-  },
-  {
-    code: 'en',
-    name: 'English',
-    flag: 'https://flagcdn.com/w40/gb.png',
-    flagAlt: 'United Kingdom Flag',
-  },
+  { href: '/#cv', label: 'CV', icon: Briefcase },
 ]
 
 export default function Header() {
   const pathname = usePathname()
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[1]) // Default to English
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -84,7 +67,7 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Hire Me Button - Hidden on mobile */}
+          {/* Contact Button - Hidden on mobile */}
           <motion.a
             href="https://wa.me/201060060292?text=Freelance"
             target="_blank"
@@ -100,7 +83,7 @@ export default function Header() {
               {/* Content */}
               <div className="relative flex items-center gap-2 text-white font-semibold text-xs sm:text-sm z-10">
                 <Briefcase className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span>Hire Me</span>
+                <span>Contact</span>
               </div>
 
               {/* Shine animation */}
@@ -152,70 +135,6 @@ export default function Header() {
             </AnimatePresence>
           </motion.button>
 
-          {/* Language Dropdown */}
-          {/* <Menu as="div" className="relative">
-            <Menu.Button
-              as={motion.button}
-              className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-800/50 border border-slate-700 text-slate-300 hover:text-cyber-lime hover:border-cyber-lime/50 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <div className="relative w-5 h-4 rounded overflow-hidden">
-                <Image
-                  src={selectedLanguage.flag}
-                  alt={selectedLanguage.flagAlt}
-                  width={20}
-                  height={16}
-                  className="object-cover"
-                />
-              </div>
-              <span className="text-xs sm:text-sm font-medium hidden sm:inline">
-                {selectedLanguage.name}
-              </span>
-              <ChevronDown className="w-4 h-4 text-slate-400" />
-            </Menu.Button>
-            <Transition
-              as={Fragment}
-              enter="transition ease-out duration-100"
-              enterFrom="transform opacity-0 scale-95"
-              enterTo="transform opacity-100 scale-100"
-              leave="transition ease-in duration-75"
-              leaveFrom="transform opacity-100 scale-100"
-              leaveTo="transform opacity-0 scale-95"
-            >
-              <Menu.Items className="absolute right-0 mt-2 w-40 origin-top-right rounded-lg bg-slate-800/95 backdrop-blur-md border border-slate-700 shadow-xl z-50">
-                <div className="p-1">
-                  {languages.map(language => (
-                    <Menu.Item key={language.code}>
-                      {({ active }: { active: boolean }) => (
-                        <button
-                          onClick={() => setSelectedLanguage(language)}
-                          className={`${
-                            active ? 'bg-cyber-lime/10 text-cyber-lime' : 'text-slate-300'
-                          } ${
-                            selectedLanguage.code === language.code
-                              ? 'bg-cyber-lime/20 text-cyber-lime'
-                              : ''
-                          } group flex w-full items-center gap-3 rounded-md px-3 py-2 text-sm transition-colors`}
-                        >
-                          <div className="relative w-6 h-5 rounded overflow-hidden flex-shrink-0">
-                            <Image
-                              src={language.flag}
-                              alt={language.flagAlt}
-                              width={24}
-                              height={20}
-                              className="object-cover"
-                            />
-                          </div>
-                          <span className="font-medium">{language.name}</span>
-                        </button>
-                      )}
-                    </Menu.Item>
-                  ))}
-                </div>
-              </Menu.Items>
-            </Transition>
-          </Menu> */}
         </div>
       </div>
 
@@ -273,7 +192,7 @@ export default function Header() {
                 {/* Divider */}
                 <div className="h-px bg-slate-700 mx-2" />
 
-                {/* Hire Me Button in Mobile Menu */}
+                {/* Contact Button in Mobile Menu */}
                 <div className="p-2">
                   <motion.a
                     href="https://wa.me/201060060292?text=Freelance"
@@ -288,7 +207,7 @@ export default function Header() {
                     <div className="relative px-4 py-3 rounded-lg bg-gradient-to-r from-cyber-lime to-emerald-400 shadow-lg shadow-cyber-lime/30">
                       <div className="relative flex items-center justify-center gap-2 text-white font-semibold text-sm z-10">
                         <Briefcase className="w-5 h-5" />
-                        <span>Hire Me</span>
+                        <span>Contact</span>
                       </div>
                       <motion.div
                         className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent"

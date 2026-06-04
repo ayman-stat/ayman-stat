@@ -49,6 +49,13 @@ export default function GlowButton({
         </a>
       )
     }
+    if (href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+      return (
+        <a href={href} className="inline-block" target={href.startsWith('http') ? '_blank' : undefined} rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}>
+          {content}
+        </a>
+      )
+    }
     return (
       <Link href={href} className="inline-block">
         {content}

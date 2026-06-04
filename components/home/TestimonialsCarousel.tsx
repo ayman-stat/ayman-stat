@@ -1,22 +1,12 @@
 'use client'
 
-import { motion, AnimatePresence } from 'framer-motion'
-import { useState, useEffect } from 'react'
-import { testimonials } from '@/data'
-import { Star, Quote } from 'lucide-react'
+import { motion } from 'framer-motion'
+import { testimonials, upworkSnapshot } from '@/data'
+import { ExternalLink, Star } from 'lucide-react'
 import SectionWrapper from '@/components/shared/SectionWrapper'
 import GradientText from '@/components/shared/GradientText'
 
 export default function TestimonialsCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length)
-    }, 5000)
-    return () => clearInterval(interval)
-  }, [])
-
   return (
     <SectionWrapper id="testimonials" className="bg-slate-dark/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
@@ -27,54 +17,63 @@ export default function TestimonialsCarousel() {
           viewport={{ once: true }}
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 md:mb-4">
-            Client <GradientText>Testimonials</GradientText>
+            Upwork <GradientText>Client Proof</GradientText>
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto">
-            What clients say about working with me
+          <p className="text-slate-400 text-base sm:text-lg max-w-3xl mx-auto">
+            Real public reviews and profile signals from freelance analytics work.
           </p>
         </motion.div>
 
-        <div className="relative max-w-4xl mx-auto">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex}
-              className="bg-slate-dark/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 sm:p-8 md:p-12"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -50 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Quote className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-cyber-lime mb-4 sm:mb-6 opacity-50" />
-              <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-6 sm:mb-8 leading-relaxed">
-                &quot;{testimonials[currentIndex].quote}&quot;
-              </p>
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0">
-                <div>
-                  <div className="font-semibold text-white mb-1 text-sm sm:text-base">
-                    {testimonials[currentIndex].author}
-                  </div>
-                  <div className="text-xs sm:text-sm text-slate-400">{testimonials[currentIndex].company}</div>
+        <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.65fr] gap-6 md:gap-8">
+          <motion.div
+            className="bg-midnight-blue/70 border border-slate-700 rounded-2xl p-6 md:p-8"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-xl font-bold text-white mb-2">{upworkSnapshot.title}</h3>
+            <p className="text-sm text-slate-400 mb-5">
+              Public profile indicators are useful because they are externally visible and client-driven.
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-3 mb-6">
+              {upworkSnapshot.stats.map((item) => (
+                <div key={item} className="rounded-lg border border-slate-700 bg-slate-dark/50 px-4 py-3 text-sm text-slate-200">
+                  {item}
                 </div>
-                <div className="flex gap-1">
-                  {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-yellow-400 text-yellow-400" />
+              ))}
+            </div>
+            <a
+              href={upworkSnapshot.profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-cyber-lime text-sm font-semibold"
+            >
+              View Upwork profile
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {testimonials.map((item, index) => (
+              <motion.div
+                key={item.id}
+                className="bg-midnight-blue/70 border border-slate-700 rounded-2xl p-5 md:p-6"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.08 }}
+              >
+                <div className="flex gap-1 mb-4">
+                  {[...Array(item.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                   ))}
                 </div>
-              </div>
-            </motion.div>
-          </AnimatePresence>
-
-          {/* Navigation Dots */}
-          <div className="flex justify-center gap-2 mt-6 sm:mt-8">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`h-2 rounded-full transition-all ${
-                  index === currentIndex ? 'bg-cyber-lime w-8' : 'bg-slate-700 w-2'
-                }`}
-                aria-label={`Go to testimonial ${index + 1}`}
-              />
+                <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-4">
+                  &quot;{item.quote}&quot;
+                </p>
+                <div className="text-xs text-slate-500">{item.project}</div>
+                <div className="text-sm font-semibold text-white mt-1">{item.author}</div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -82,4 +81,3 @@ export default function TestimonialsCarousel() {
     </SectionWrapper>
   )
 }
-

@@ -1,17 +1,27 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import NavigationLine from '@/components/NavigationLine'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Mohamed Ayman - Senior Data Scientist',
-  description: 'Professional portfolio of Mohamed Ayman, Senior Data Scientist with 5+ years of experience generating multimillion revenue growth.',
-  keywords: ['Data Scientist', 'Machine Learning', 'Business Intelligence', 'Analytics', 'Python', 'R'],
+  title: 'Mohamed Ayman | Senior Data Scientist & Analytics Lead',
+  description: 'Portfolio of Mohamed Ayman: senior data science, business intelligence, predictive modeling, ML engineering, and practical GenAI/cloud AI development.',
+  keywords: [
+    'Senior Data Scientist',
+    'Lead Data Scientist',
+    'Analytics Lead',
+    'Machine Learning Engineer',
+    'Business Intelligence',
+    'Predictive Modeling',
+    'Python',
+    'Power BI',
+    'AWS Bedrock',
+    'Generative AI',
+  ],
   authors: [{ name: 'Mohamed Ayman' }],
   openGraph: {
-    title: 'Mohamed Ayman - Senior Data Scientist',
-    description: '5+ years of experience generating multimillion revenue growth through advanced analytics and machine learning.',
+    title: 'Mohamed Ayman | Senior Data Scientist & Analytics Lead',
+    description: 'Data science, BI, predictive modeling, ML engineering, and practical GenAI/cloud AI portfolio.',
     type: 'website',
   },
 }
@@ -23,9 +33,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className="bg-midnight-blue text-white min-h-screen antialiased">
+      <body className="bg-midnight-blue text-white min-h-screen antialiased overflow-x-hidden">
         <Header />
-        {/* <NavigationLine /> */}
         <main className="relative z-10 min-h-screen">
           {children}
         </main>
