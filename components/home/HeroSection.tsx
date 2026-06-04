@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowDown, Github, Linkedin, Mail, MessageCircle } from 'lucide-react'
 import { hero, socialLinks } from '@/data'
 import GlowButton from '@/components/shared/GlowButton'
 import GradientText from '@/components/shared/GradientText'
@@ -71,6 +71,7 @@ export default function HeroSection() {
               <GlowButton
                 href={hero.cta.connect.href}
                 variant="secondary"
+                icon={<MessageCircle size={18} className="md:w-5 md:h-5" />}
                 className="text-sm md:text-base px-5 md:px-6 py-2.5 md:py-3"
               >
                 {hero.cta.connect.text}
@@ -102,6 +103,17 @@ export default function HeroSection() {
                 aria-label="GitHub Profile"
               >
                 <Github size={20} className="md:w-6 md:h-6" />
+              </motion.a>
+              <motion.a
+                href={socialLinks.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 md:p-3 bg-slate-dark/50 backdrop-blur-sm border border-slate-700 rounded-lg text-slate-300 hover:text-cyber-lime hover:border-cyber-lime transition-colors"
+                whileHover={{ scale: 1.1, rotate: 0 }}
+                whileTap={{ scale: 0.9 }}
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={20} className="md:w-6 md:h-6" />
               </motion.a>
               <motion.a
                 href={`mailto:${socialLinks.email}`}

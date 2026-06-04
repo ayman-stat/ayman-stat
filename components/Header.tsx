@@ -1,10 +1,11 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { Home, FolderOpen, Code, Briefcase, Menu as MenuIcon, X } from 'lucide-react'
+import { Home, FolderOpen, Code, Briefcase, MessageCircle, Menu as MenuIcon, X } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
+import { socialLinks } from '@/data'
 
 const navLinks = [
   { href: '/', label: 'Home', icon: Home },
@@ -69,7 +70,7 @@ export default function Header() {
 
           {/* Contact Button - Hidden on mobile */}
           <motion.a
-            href="https://wa.me/201060060292?text=Freelance"
+            href={socialLinks.whatsapp}
             target="_blank"
             rel="noopener noreferrer"
             className="relative group overflow-hidden hidden sm:block"
@@ -82,8 +83,8 @@ export default function Header() {
 
               {/* Content */}
               <div className="relative flex items-center gap-2 text-white font-semibold text-xs sm:text-sm z-10">
-                <Briefcase className="w-4 h-4 sm:w-5 sm:h-5" />
-                <span>Contact</span>
+                <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5" />
+                <span>WhatsApp</span>
               </div>
 
               {/* Shine animation */}
@@ -195,7 +196,7 @@ export default function Header() {
                 {/* Contact Button in Mobile Menu */}
                 <div className="p-2">
                   <motion.a
-                    href="https://wa.me/201060060292?text=Freelance"
+                    href={socialLinks.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setMobileMenuOpen(false)}
@@ -206,8 +207,8 @@ export default function Header() {
                   >
                     <div className="relative px-4 py-3 rounded-lg bg-gradient-to-r from-cyber-lime to-emerald-400 shadow-lg shadow-cyber-lime/30">
                       <div className="relative flex items-center justify-center gap-2 text-white font-semibold text-sm z-10">
-                        <Briefcase className="w-5 h-5" />
-                        <span>Contact</span>
+                        <MessageCircle className="w-5 h-5" />
+                        <span>WhatsApp</span>
                       </div>
                       <motion.div
                         className="absolute inset-0 -skew-x-12 bg-gradient-to-r from-transparent via-white/30 to-transparent"

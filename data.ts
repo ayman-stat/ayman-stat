@@ -82,7 +82,7 @@ export const hero = {
   cta: {
     primary: { text: 'View Use Cases', href: '#projects' },
     secondary: { text: 'View CV', href: '#cv' },
-    connect: { text: 'Contact Me', href: 'mailto:mohammed.ayman.stat@gmail.com' },
+    connect: { text: 'WhatsApp', href: socialLinks.whatsapp },
   },
 }
 
