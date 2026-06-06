@@ -237,6 +237,27 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 'streamlit-churn-intelligence',
+    title: 'Customer Churn Intelligence Streamlit App',
+    description:
+      'Public ML web app for churn prediction, customer scoring, model comparison, retention analytics, and business-friendly decision support.',
+    category: 'ML Product',
+    technologies: ['Streamlit', 'Python', 'scikit-learn', 'Plotly', 'pandas', 'pytest'],
+    status: 'Public portfolio project',
+    url: 'https://github.com/ayman-stat/customer-churn-intelligence-streamlit',
+    results: [
+      { metric: 'Product', value: 'ML app' },
+      { metric: 'Models', value: '3 tracks' },
+      { metric: 'Validation', value: 'Smoke tests' },
+    ],
+    details: [
+      'Turns a simple Streamlit learning idea into a recruiter-ready customer intelligence product.',
+      'Generates synthetic customer data so the repository is safe to publish without employer or client data.',
+      'Includes EDA, feature engineering, candidate model training, risk scoring, and retention recommendations.',
+      'Structured with reusable source modules, tests, and a clean README for professional review.',
+    ],
+  },
+  {
     id: 'bedrock',
     title: 'AWS Bedrock GenAI & AI Agents Labs',
     description:
