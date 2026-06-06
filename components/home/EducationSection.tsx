@@ -5,6 +5,7 @@ import { certifications, education, inProgressLearning } from '@/data'
 import { BookOpen, GraduationCap, Loader2 } from 'lucide-react'
 import SectionWrapper from '@/components/shared/SectionWrapper'
 import GradientText from '@/components/shared/GradientText'
+import Image from 'next/image'
 
 export default function EducationSection() {
   return (
@@ -38,12 +39,27 @@ export default function EducationSection() {
             <div className="space-y-4">
               {education.map((item) => (
                 <div key={item.title} className="border-l border-cyber-lime/40 pl-4">
-                  <h4 className="text-white font-semibold">{item.title}</h4>
-                  <p className="text-sm text-slate-400">{item.institution}</p>
-                  <p className="text-xs text-slate-500 mt-1">
-                    {item.period}
-                    {item.status ? ` | ${item.status}` : ''}
-                  </p>
+                  <div className="flex items-start gap-3">
+                    {item.logo && (
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-slate-600 bg-white p-1.5 shadow-sm">
+                        <Image
+                          src={item.logo}
+                          alt={item.logoAlt ?? `${item.institution} logo`}
+                          width={34}
+                          height={34}
+                          className="h-full w-full object-contain"
+                        />
+                      </div>
+                    )}
+                    <div className="min-w-0">
+                      <h4 className="text-white font-semibold">{item.title}</h4>
+                      <p className="text-sm text-slate-400">{item.institution}</p>
+                      <p className="text-xs text-slate-500 mt-1">
+                        {item.period}
+                        {item.status ? ` | ${item.status}` : ''}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>

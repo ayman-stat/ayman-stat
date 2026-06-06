@@ -1,6 +1,8 @@
 export interface Experience {
   id: string
   company: string
+  logo?: string
+  logoAlt?: string
   role: string
   period: string
   location: string
@@ -51,6 +53,8 @@ export interface ServiceArea {
 export interface EducationItem {
   title: string
   institution: string
+  logo?: string
+  logoAlt?: string
   period: string
   status?: string
 }
@@ -100,6 +104,8 @@ export const experiences: Experience[] = [
   {
     id: 'leejam',
     company: 'Leejam Sports Company',
+    logo: '/logos/leejam.png',
+    logoAlt: 'Leejam Sports Company logo',
     role: 'Lead Data Analyst',
     period: 'Apr 2025 - Present',
     location: 'Saudi Arabia',
@@ -120,6 +126,8 @@ export const experiences: Experience[] = [
   {
     id: 'idh',
     company: 'IDH',
+    logo: '/logos/idh.png',
+    logoAlt: 'IDH logo',
     role: 'Data Scientist Supervisor, Consultant',
     period: 'May 2024 - Present',
     location: 'Consultant',
@@ -139,6 +147,8 @@ export const experiences: Experience[] = [
   {
     id: 'credit-agricole',
     company: 'Credit Agricole Egypt Bank',
+    logo: '/logos/credit-agricole-egypt.png',
+    logoAlt: 'Credit Agricole Egypt logo',
     role: 'Data Analytics Officer',
     period: 'Jul 2023 - Apr 2024',
     location: 'Cairo, Egypt',
@@ -158,6 +168,8 @@ export const experiences: Experience[] = [
   {
     id: 'huawei',
     company: 'Huawei Technologies Co.',
+    logo: '/logos/huawei.png',
+    logoAlt: 'Huawei logo',
     role: 'Data Analyst',
     period: 'Jan 2022 - Jun 2023',
     location: 'Cairo, Egypt',
@@ -177,6 +189,8 @@ export const experiences: Experience[] = [
   {
     id: 'upwork',
     company: 'Upwork / Private Client Work',
+    logo: '/logos/upwork.png',
+    logoAlt: 'Upwork logo',
     role: 'Freelance Data Analyst & AI Product Contributor',
     period: 'Oct 2019 - Present',
     location: 'Remote',
@@ -421,12 +435,16 @@ export const education: EducationItem[] = [
   {
     title: 'M.Sc. in Data Science',
     institution: 'Faculty of Graduate Studies for Statistical Research, Cairo University',
+    logo: '/logos/cairo-university-mark.png',
+    logoAlt: 'Cairo University logo',
     period: 'Expected 2026',
     status: 'In Progress',
   },
   {
     title: 'B.Sc. in Statistics',
     institution: 'Faculty of Economics and Political Science, Cairo University',
+    logo: '/logos/cairo-university-mark.png',
+    logoAlt: 'Cairo University logo',
     period: '2021',
   },
 ]

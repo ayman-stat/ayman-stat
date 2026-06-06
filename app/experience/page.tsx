@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { experiences } from '@/data'
 import { Calendar, MapPin, TrendingUp } from 'lucide-react'
+import Image from 'next/image'
 
 export default function ExperiencePage() {
   return (
@@ -54,10 +55,23 @@ export default function ExperiencePage() {
                     className="bg-slate-dark/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6 hover:border-cyber-lime/50 transition-all duration-300"
                     whileHover={{ scale: 1.02 }}
                   >
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                      <div>
-                        <h3 className="text-2xl font-bold text-cyber-lime mb-2">{exp.role}</h3>
-                        <h4 className="text-xl text-white mb-2">{exp.company}</h4>
+                    <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+                      <div className="flex min-w-0 items-start gap-4">
+                        {exp.logo && (
+                          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-slate-600 bg-white p-2 shadow-sm">
+                            <Image
+                              src={exp.logo}
+                              alt={exp.logoAlt ?? `${exp.company} logo`}
+                              width={40}
+                              height={40}
+                              className="h-full w-full object-contain"
+                            />
+                          </div>
+                        )}
+                        <div className="min-w-0">
+                          <h3 className="text-2xl font-bold text-cyber-lime mb-2">{exp.role}</h3>
+                          <h4 className="text-xl text-white mb-2">{exp.company}</h4>
+                        </div>
                       </div>
                       <div className="flex flex-col md:items-end gap-2 mt-2 md:mt-0">
                         <div className="flex items-center text-slate-400 text-sm">
