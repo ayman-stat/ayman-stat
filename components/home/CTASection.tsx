@@ -141,7 +141,7 @@ export default function CTASection() {
           </div>
           <div className="flex items-center gap-2">
             <Check className="w-4 h-4 text-cyber-lime" />
-            <span>Confidential projects handled carefully</span>
+            <span>Available for senior data and ML roles</span>
           </div>
         </motion.div>
       </div>
