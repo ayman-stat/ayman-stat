@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { projects, socialLinks } from '@/data'
-import { ExternalLink, CheckCircle2 } from 'lucide-react'
+import { ExternalLink, CheckCircle2, Rocket } from 'lucide-react'
 
 export default function ProjectsPage() {
   return (
@@ -48,17 +48,33 @@ export default function ProjectsPage() {
                 </div>
 
                 <p className="text-slate-400 mb-6 leading-relaxed">{project.description}</p>
-                {project.url && (
-                  <motion.a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-cyber-lime hover:text-white transition-colors mb-6 text-sm font-semibold"
-                    whileHover={{ x: 4 }}
-                  >
-                    Open public repository
-                    <ExternalLink className="w-4 h-4" />
-                  </motion.a>
+                {(project.demoUrl || project.url) && (
+                  <div className="mb-6 flex flex-wrap gap-3">
+                    {project.demoUrl && (
+                      <motion.a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-lg bg-cyber-lime px-4 py-2 text-sm font-semibold text-midnight-blue transition-colors hover:bg-white"
+                        whileHover={{ x: 4 }}
+                      >
+                        <Rocket className="w-4 h-4" />
+                        Launch live app
+                      </motion.a>
+                    )}
+                    {project.url && (
+                      <motion.a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 rounded-lg border border-cyber-lime/50 px-4 py-2 text-sm font-semibold text-cyber-lime transition-colors hover:border-white hover:text-white"
+                        whileHover={{ x: 4 }}
+                      >
+                        Open repository
+                        <ExternalLink className="w-4 h-4" />
+                      </motion.a>
+                    )}
+                  </div>
                 )}
 
                 {/* Results */}

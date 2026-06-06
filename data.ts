@@ -25,6 +25,7 @@ export interface Project {
   details: string[]
   status?: string
   url?: string
+  demoUrl?: string
 }
 
 export interface Skill {
@@ -240,21 +241,22 @@ export const projects: Project[] = [
     id: 'streamlit-churn-intelligence',
     title: 'Customer Churn Intelligence Streamlit App',
     description:
-      'Public ML web app for churn prediction, customer scoring, model comparison, retention analytics, and business-friendly decision support.',
-    category: 'ML Product',
-    technologies: ['Streamlit', 'Python', 'scikit-learn', 'Plotly', 'pandas', 'pytest'],
-    status: 'Public portfolio project',
+      'Live senior-level ML product demo for churn prediction, retention prioritization, executive value scenarios, customer scoring, and governance-aware decision support.',
+    category: 'Customer Intelligence',
+    technologies: ['Streamlit', 'Python', 'scikit-learn', 'Plotly', 'Model Governance', 'MLOps Readiness'],
+    status: 'Live public ML app',
+    demoUrl: 'https://ayman-stat-customer-churn-intelligence-streamlit-app-bnhaiu.streamlit.app/',
     url: 'https://github.com/ayman-stat/customer-churn-intelligence-streamlit',
     results: [
-      { metric: 'Product', value: 'ML app' },
-      { metric: 'Models', value: '3 tracks' },
-      { metric: 'Validation', value: 'Smoke tests' },
+      { metric: 'Live demo', value: 'Streamlit' },
+      { metric: 'Decision layer', value: 'ROI view' },
+      { metric: 'Governance', value: 'Model card' },
     ],
     details: [
-      'Turns a simple Streamlit learning idea into a recruiter-ready customer intelligence product.',
+      'Turns a simple Streamlit learning idea into a senior-level customer intelligence product demo.',
       'Generates synthetic customer data so the repository is safe to publish without employer or client data.',
-      'Includes EDA, feature engineering, candidate model training, risk scoring, and retention recommendations.',
-      'Structured with reusable source modules, tests, and a clean README for professional review.',
+      'Includes EDA, feature engineering, candidate model training, risk scoring, executive value scenarios, and retention actions.',
+      'Adds production-minded notes for target/control testing, drift monitoring, privacy, threshold review, and human decision controls.',
     ],
   },
   {

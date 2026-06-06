@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { projects } from '@/data'
-import { ExternalLink, ArrowRight } from 'lucide-react'
+import { ExternalLink, ArrowRight, Rocket } from 'lucide-react'
 import SectionWrapper from '@/components/shared/SectionWrapper'
 import GradientText from '@/components/shared/GradientText'
 import Link from 'next/link'
@@ -85,17 +85,32 @@ export default function FeaturedProjects() {
                     ))}
                   </div>
 
-                  {/* View Details Link */}
-                  {project.url ? (
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-cyber-lime hover:gap-3 transition-all"
-                    >
-                      <span className="text-xs sm:text-sm font-semibold">Open Repository</span>
-                      <ExternalLink size={14} className="sm:w-4 sm:h-4" />
-                    </a>
+                  {/* Project Actions */}
+                  {project.demoUrl || project.url ? (
+                    <div className="flex flex-wrap gap-3">
+                      {project.demoUrl && (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-lg bg-cyber-lime px-3 py-2 text-xs sm:text-sm font-semibold text-midnight-blue transition-all hover:bg-white"
+                        >
+                          <Rocket size={14} className="sm:w-4 sm:h-4" />
+                          <span>Launch App</span>
+                        </a>
+                      )}
+                      {project.url && (
+                        <a
+                          href={project.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 rounded-lg border border-cyber-lime/50 px-3 py-2 text-xs sm:text-sm font-semibold text-cyber-lime transition-all hover:border-white hover:text-white"
+                        >
+                          <span>Repository</span>
+                          <ExternalLink size={14} className="sm:w-4 sm:h-4" />
+                        </a>
+                      )}
+                    </div>
                   ) : (
                     <Link href="/projects" className="inline-flex items-center gap-2 text-cyber-lime hover:gap-3 transition-all">
                       <span className="text-xs sm:text-sm font-semibold">View Details</span>
