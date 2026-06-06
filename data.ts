@@ -277,18 +277,19 @@ export const projects: Project[] = [
     id: 'mushroom-safety-classifier',
     title: 'Mushroom Safety Classification Decision App',
     description:
-      'Completed Coursera Streamlit project upgraded into a professional risk-aware ML app for classification, model comparison, threshold policy, scoring, and governance documentation.',
+      'Live Coursera Streamlit project upgraded into a professional risk-aware ML product with a unified dark theme, interactive diagnostics, model comparison, threshold policy, scoring, and governance documentation.',
     category: 'Risk Classification',
     technologies: ['Streamlit', 'Python', 'scikit-learn', 'Plotly', 'Model Governance', 'Threshold Policy'],
-    status: 'Completed Coursera project',
+    status: 'Live public ML app',
+    demoUrl: 'https://ayman-stat-mushroom-safety-classifier-streamlit-app-jeedwt.streamlit.app/',
     url: 'https://github.com/ayman-stat/mushroom-safety-classifier-streamlit',
     results: [
+      { metric: 'Live demo', value: 'Streamlit' },
       { metric: 'Risk lens', value: 'False-safe' },
       { metric: 'Models', value: '4 candidates' },
-      { metric: 'Docs', value: 'Model card' },
     ],
     details: [
-      'Refactors the original Coursera lab into a clean, relative-path, portfolio-ready Streamlit product.',
+      'Refactors the original Coursera lab into a clean, relative-path, portfolio-ready Streamlit product with a unified dark theme and interactive Plotly diagnostics.',
       'Frames poisonous-mushroom classification as an asymmetric risk problem where false-safe predictions matter most.',
       'Includes data-quality review, candidate model comparison, threshold controls, manual scoring, batch scoring, and rollout notes.',
       'Uses a public educational dataset only and clearly states it is not intended for real consumption or safety decisions.',
