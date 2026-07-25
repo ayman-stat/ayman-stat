@@ -4,12 +4,13 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Mohamed Ayman | Senior Data Scientist & Analytics Lead',
+  title: 'Mohamed Ayman | Senior Data Scientist & Senior ML Engineer',
   description: 'Portfolio of Mohamed Ayman: senior data science, business intelligence, predictive modeling, ML engineering, and practical GenAI/cloud AI development.',
   keywords: [
     'Senior Data Scientist',
-    'Lead Data Scientist',
-    'Analytics Lead',
+    'Senior Machine Learning Engineer',
+    'Senior AI Engineer',
+    'Senior Analytics',
     'Machine Learning Engineer',
     'Business Intelligence',
     'Predictive Modeling',
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Mohamed Ayman' }],
   openGraph: {
-    title: 'Mohamed Ayman | Senior Data Scientist & Analytics Lead',
+    title: 'Mohamed Ayman | Senior Data Scientist & Senior ML Engineer',
     description: 'Data science, BI, predictive modeling, ML engineering, and practical GenAI/cloud AI portfolio.',
     type: 'website',
   },

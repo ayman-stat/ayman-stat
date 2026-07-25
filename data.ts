@@ -79,7 +79,7 @@ export const socialLinks = {
 
 export const hero = {
   name: 'Mohamed Ayman',
-  roles: ['Senior Data Scientist', 'Lead Analytics Professional', 'ML Engineering & BI'],
+  roles: ['Senior Data Scientist', 'Senior ML Engineer', 'GenAI & Executive Analytics'],
   tagline: 'Data science, BI, and production-minded ML for decisions that survive scrutiny.',
   bio:
     'I help teams turn messy business questions into reliable analytics products: predictive models, executive dashboards, automated reporting, risk analysis, and practical AI workflows. My experience spans banking, telecom, healthcare, sports, consulting, and global freelance analytics.',
@@ -459,7 +459,7 @@ export const education: EducationItem[] = [
     institution: 'Faculty of Graduate Studies for Statistical Research, Cairo University',
     logo: '/logos/cairo-university-mark.png',
     logoAlt: 'Cairo University logo',
-    period: 'Expected 2026',
+    period: 'Expected 2027',
     status: 'In Progress',
   },
   {

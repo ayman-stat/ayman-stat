@@ -1,6 +1,6 @@
 # Mohamed Ayman Ghareb
 
-**Senior Data Scientist | Lead Analytics | ML Engineering | Business Intelligence | Generative AI in Progress**
+**Senior Data Scientist | Senior ML Engineering | Business Intelligence | Generative AI in Progress**
 
 I am a data science and analytics professional with 5+ years of experience across banking, telecom, healthcare, sports, consulting, and freelance analytics. My work focuses on turning business problems into predictive models, executive dashboards, automated reporting pipelines, and practical data products.
 
@@ -70,7 +70,7 @@ Supported Retail Risk analytics through automated reporting, Power BI dashboards
 
 ## Professional Direction
 
-I am focused on Senior Data Scientist, Lead Data Scientist, ML Engineer, AI Engineer, Data Science Manager, and Analytics Lead roles where data science, BI, stakeholder leadership, and production-minded ML create measurable business value.
+I am focused on Senior Data Scientist, Senior Machine Learning Engineer, Senior AI Engineer, and Senior Analytics roles where data science, BI, stakeholder communication, and production-minded ML create measurable business value. Preferred work model: remote with multinational/global teams, or hybrid in Egypt.
 
 ## Connect
 
