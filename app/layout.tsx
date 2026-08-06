@@ -20,6 +20,11 @@ export const metadata: Metadata = {
     'Generative AI',
   ],
   authors: [{ name: 'Mohamed Ayman' }],
+  icons: {
+    icon: '/ma-logo.png',
+    shortcut: '/ma-logo.png',
+    apple: '/ma-logo.png',
+  },
   openGraph: {
     title: 'Mohamed Ayman | Senior Data Scientist & Senior ML Engineer',
     description: 'Data science, BI, predictive modeling, ML engineering, and practical GenAI/cloud AI portfolio.',

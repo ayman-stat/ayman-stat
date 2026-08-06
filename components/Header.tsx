@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { Home, FolderOpen, Code, Briefcase, MessageCircle, Menu as MenuIcon, X } from 'lucide-react'
+import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
@@ -27,19 +28,20 @@ export default function Header() {
       transition={{ duration: 0.5 }}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-3 sm:py-4 flex items-center justify-between">
-        <Link href="/">
+        <Link href="/" aria-label="Mohamed Ayman home">
           <motion.div
             className="flex items-center gap-2 sm:gap-3 cursor-pointer"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            {/* MA Logo Box */}
-            <div className="relative p-2 sm:p-2.5 bg-gradient-to-br from-cyber-lime via-data-blue to-cyan-500 rounded-lg shadow-lg shadow-cyber-lime/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyber-lime/20 to-data-blue/20 rounded-lg blur-sm" />
-              <span className="relative text-base sm:text-lg font-extrabold text-white tracking-tight">
-                MA
-              </span>
-            </div>
+            <Image
+              src="/ma-logo.png"
+              alt="Mohamed Ayman"
+              width={48}
+              height={48}
+              priority
+              className="h-10 w-10 rounded-lg object-cover shadow-lg shadow-cyber-lime/20 sm:h-12 sm:w-12"
+            />
           </motion.div>
         </Link>
 
