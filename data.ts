@@ -94,8 +94,8 @@ export const hero = {
 export const proofStats = [
   { label: 'Years in data and analytics', value: '5+', note: 'Banking, telecom, healthcare, sports, freelance' },
   { label: 'Upwork Job Success', value: '100%', note: 'Public Upwork profile' },
-  { label: 'Upwork jobs', value: '60', note: '56 completed, 4 in progress' },
-  { label: 'Verified Upwork rating', value: '5.0', note: 'Recent public client feedback' },
+  { label: 'Upwork jobs', value: '58', note: 'Public profile verified 8 Aug 2026' },
+  { label: 'Verified Upwork rating', value: '5.0', note: '39 public reviews · 8 Aug 2026' },
   { label: 'Reporting automation', value: '40%', note: 'Retail Risk reporting efficiency improvement' },
   { label: 'Manual work saved', value: '30+ hrs/mo', note: 'Huawei executive reporting automation' },
 ]
@@ -196,14 +196,14 @@ export const experiences: Experience[] = [
     location: 'Remote',
     achievements: [
       'Completed public Upwork work across data analysis, survey analytics, dashboards, statistical modeling, and research support.',
-      'Maintain 100% Job Success and Top Rated status on Upwork, with 60 public jobs listed on the profile.',
+      'Maintain 100% Job Success and Top Rated status on Upwork, with 58 total jobs shown on the public profile as of 8 August 2026.',
       'Support clients with SPSS crosstabs, Excel deliverables, Power BI dashboards, Python/R analysis, and business reporting.',
       'Contribute confidentially to InteriorAiMVP as a freelance data and AI professional in a company/client delivery context.',
     ],
     technologies: ['Python', 'R', 'SPSS', 'Excel', 'Power BI', 'Tableau', 'SQL', 'Survey Analytics'],
     impact: [
       { metric: 'Job Success', value: '100%' },
-      { metric: 'Public jobs', value: '60' },
+      { metric: 'Public jobs', value: '58' },
       { metric: 'Rating', value: '5.0' },
     ],
   },
@@ -544,7 +544,7 @@ export const testimonials: Testimonial[] = [
 
 export const upworkSnapshot = {
   title: 'Upwork public profile snapshot',
-  stats: ['100% Job Success', 'Top Rated', '60 total jobs', '56 completed jobs', '4 jobs in progress', '$35/hr listed rate'],
+  stats: ['100% Job Success', 'Top Rated', '58 total jobs', '64 total hours', '5.0 rating', '39 public reviews'],
   profileUrl: socialLinks.upwork,
 }
 
